@@ -30,7 +30,7 @@ const HeartDisease = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/predict_heartdisease', formData);
+            const response = await axios.post('https://multiple-disease-prediction-using-ml-w11p.onrender.com/predict_heartdisease', formData);
             setPrediction(response.data.prediction);
         } catch (error) {
             console.error("There was an error making the prediction request!", error);

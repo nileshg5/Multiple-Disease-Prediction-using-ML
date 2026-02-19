@@ -28,7 +28,7 @@ const BreastCancer = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/predict_breastcancer', inputs);
+            const response = await axios.post('https://multiple-disease-prediction-using-ml-w11p.onrender.com/predict_breastcancer', inputs);
             setPrediction(response.data.prediction);
         } catch (error) {
             console.error("There was an error making the prediction request!", error);

@@ -25,7 +25,7 @@ const Diabetes = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/predict_diabetes', inputs);
+            const response = await axios.post('https://multiple-disease-prediction-using-ml-w11p.onrender.com/predict_diabetes', inputs);
             setPrediction(response.data.prediction);
         } catch (error) {
             console.error('Error:', error);
